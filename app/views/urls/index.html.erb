@@ -1,0 +1,27 @@
+<h1>Listing urls</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Link</th>
+      <th>Key</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @urls.each do |url| %>
+      <tr>
+        <td><%= url.link %></td>
+        <td><%= url.key %></td>
+        <td><%= link_to 'Show', url %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Url', new_url_path %>
